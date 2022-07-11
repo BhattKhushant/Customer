@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,12 +8,12 @@
     tools:context=".Login_Activity">
 
     <ImageView
-        android:layout_marginBottom="10dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
         android:layout_above="@id/tv1"
-        android:src="@mipmap/ic_launcher_round"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/tv1"
@@ -25,10 +24,12 @@
         android:layout_marginBottom="50dp"
         android:text="Login"
         android:textSize="35sp"
-        android:textStyle="italic|bold"/>
+        android:textStyle="italic|bold" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
+        android:elevation="0dp"
+        app:cardBackgroundColor="#0000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -47,7 +48,6 @@
                 android:hint="Email"
                 android:isScrollContainer="true"
                 android:theme="@style/TEXTINPUTLAYOUT"
-                app:boxBackgroundColor="#0000"
                 app:boxBackgroundMode="outline"
                 app:hintTextAppearance="@style/TXT_VIEW_EDIT">
 
@@ -61,18 +61,65 @@
                     android:textSize="15sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/button"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/L_password"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Password"
                 android:layout_below="@id/L_email"
-                android:layout_centerHorizontal="true"
-                android:text="Verify" />
+                android:isScrollContainer="true"
+                android:theme="@style/TEXTINPUTLAYOUT"
+                app:passwordToggleEnabled="true"
+                app:boxBackgroundMode="outline"
+                app:hintTextAppearance="@style/TXT_VIEW_EDIT">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/L_password1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:inputType="textPassword"
+                    android:maxLines="5"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/L_Con_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Conform Password"
+                android:layout_below="@id/L_password"
+                android:isScrollContainer="true"
+                android:theme="@style/TEXTINPUTLAYOUT"
+                app:passwordToggleEnabled="true"
+                app:boxBackgroundMode="outline"
+                app:hintTextAppearance="@style/TXT_VIEW_EDIT">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/L_Con_password1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_mail"
+                    android:inputType="textPassword"
+                    android:maxLines="5"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:text="Verify" />
 
 </RelativeLayout>

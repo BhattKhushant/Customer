@@ -22,6 +22,7 @@
         <item name="boxCornerRadiusTopEnd">5dp</item>
         <item name="boxCornerRadiusTopStart">5dp</item>
         <item name="itemRippleColor">@color/white</item>
+        <item name="boxBackgroundColor">#596164</item>
         <item name="android:textColorHint">@color/white</item>
         <item name="iconTint">@color/white</item>
     </style>
